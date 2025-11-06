@@ -1,0 +1,6 @@
+*Filtrar por fechas*
+*Eliminación de usuario*
+*Organización de pedidos por sucursales*
+*Impresión de ticket*
+Mejorar diseño de menú
+Recuperación de contraseña

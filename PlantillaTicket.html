@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantillaTicket</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .hoja {
+            border: 1px solid black;
+            width: 794px;
+            height: 1123px;
+        }
+
+        .info {
+            margin: 0 auto;
+            max-width: 550px;
+            text-align: center;
+        }
+
+        .line {
+            text-align: center;
+        }
+
+        .imagen p {
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            border-radius: 100%;
+        }
+
+        .date {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .tableCenter {
+            margin: 0 auto;
+        }
+
+        .body tbody tr td {
+            text-align: center;
+        }
+
+        .total {
+            margin-left: 480px;
+            text-align: right;
+        }
+
+        .totalCompra {
+            font-size: 20px;
+        }
+
+        .bye {
+            margin: 0 auto;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hoja">
+        <!-- Imagen logo -->
+        <div class="imagen">
+            <p><img src="images/logo.jpeg" alt=""></p>
+        </div>
+
+        <div class="container">
+            <div class="info">
+                <p>Sucursal Mitras Poniente: Av Villa Corona 1159, Mitras Poniente, 66023 Villas del Poniente, N.L.</p>
+                <p>Sucursal Real Cumbres : Real de Cumbres 704, Real Cumbres, 64346 Monterrey, N.L.</p>
+                <p>Teléfono: 81-8083-3708</p>
+            </div>
+        </div>
+
+        <div class="line">
+            <p>---------------------------------------------------------------------------------------------------------
+            </p>
+        </div>
+
+        <div class="date">
+            <p>{{fechaHora}}</p>
+            <p>Cliente: {{nombreCompleto}}</p>
+        </div>
+
+        <div class="line">
+            <p>---------------------------------------------------------------------------------------------------------
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="tableCenter">
+                <table class="head">
+                    <thead>
+                        <tr>
+                            <th width="100px">Cantidad</th>
+                            <th width="250px">Platillo</th>
+                            <th width="100px">Precio</th>
+                            <th width="100px">Total</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <div class="line">
+            <p>---------------------------------------------------------------------------------------------------------
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="tableCenter">
+                <table class="body">
+                    <tbody>
+                        <!-- Agregar platillos del pedido -->
+                        <!-- 
+                        <tr>
+                            <td width="100px">3</td>
+                            <td width="250px">Platillo...</td>
+                            <td width="100px">$100</td>
+                            <td width="100px">$300</td>
+                        </tr> 
+                        -->
+                        <tr>
+                            <td width="100px">3</td>
+                            <td width="250px">Platillo...</td>
+                            <td width="100px">$100</td>
+                            <td width="100px">$300</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="line">
+            <p>---------------------------------------------------------------------------------------------------------
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="total">
+                <p>IVA (16%): {{impuestoIVA}}</p>
+                <p class="totalCompra"><strong>Total: {{totalCompra}}</strong></p>
+            </div>
+        </div>
+
+        <div class="line">
+            <p>---------------------------------------------------------------------------------------------------------
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="bye">
+                <p>Gracias por su visita!</p>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

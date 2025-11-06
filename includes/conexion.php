@@ -12,10 +12,4 @@ $conexion = mysqli_connect($host,$user,$password,$database);
 if(!$conexion){
     die("No hay conexión :".mysqli_connect_error());
 }
-
-
-// Prueba de conexión a github con la tablet para ver si funciona correctamente
-// no se que más hacer 
-
-
 ?>

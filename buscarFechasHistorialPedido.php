@@ -2,8 +2,7 @@
 header('Content-Type: application/json');
 
 // Conexión a la base de datos
-$conexion = new mysqli("localhost", "root", "", "antojitosmarbe");
-
+include 'includes/conexion.php';
 
 
 $fecha_inicio = $_POST['fecha_inicio'] ?? '';

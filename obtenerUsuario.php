@@ -1,13 +1,7 @@
 <?php
-//Conectar base de datos
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "antojitosmarbe";
-$conexion = mysqli_connect($host, $user, $password, $database);
-if (!$conexion) {
-    die("No hay conexión :" . mysqli_connect_error());
-}
+include 'includes/conexion.php';
+
+
 
 if (isset($_POST['usuario'])) {
     $usuario = $_POST['usuario'];

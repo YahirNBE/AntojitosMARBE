@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/antojitos.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: -1;
+}
+
+
+.container {
+    margin-top: 60px;
+    position: relative;
+    text-align: center;
+    padding: 15px 20px 20px 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .18);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .25);
+}
+
+h1 {
+    margin-top: 100px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.img-logo {
+    width: 180px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: 90px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+button {
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+    font-size: 17px;
+    background-color: #ed7d35;
+    border: none;
+    color: #f5fffe;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: #210802;
+}
+
+input {
+    background-color: #dcd6d1;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 300px;
+    color: #6d7069;
+    padding-left: 10px;
+}
+
+input::placeholder {
+    padding: 10px;
+    color: #6d7069;
+}

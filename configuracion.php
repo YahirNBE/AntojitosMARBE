@@ -1,14 +1,7 @@
 <?php
 session_start();
-// Cadena de conexión
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$basedatosname = "antojitosmarbe";
-$conexion = mysqli_connect($hostname, $username, $password, $basedatosname);
-if (!$conexion) {
-    die("Error al conectar " . mysqli_connect_error());
-}
+include 'includes/conexion.php';
+
 
 
 $nombre = $_POST['nombre'];

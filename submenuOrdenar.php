@@ -101,19 +101,9 @@
             </div>
         </div> -->
         <?php
-        // Cadena de conexión
-        $hostname = "localhost";
-        $username = "root";
-        $password = "";
-        $basedatosname = "antojitosmarbe";
+        include 'includes/conexion.php';
 
-        //Crear cadena conexión
-        $conexion = mysqli_connect($hostname, $username, $password, $basedatosname);
 
-        //Revisar conexión
-        if (!$conexion) {
-            die("Error al conectar " . mysqli_connect_error());
-        }
 
         $sql = "SELECT * FROM productos WHERE disponible_producto=1";
         $result = mysqli_query($conexion, $sql);
@@ -189,19 +179,9 @@
                 <div class="direccion-content">
                     <p><strong>Dirección de entrega:</strong>
                         <?php
-                        // Cadena de conexión
-                        $hostname = "localhost";
-                        $username = "root";
-                        $password = "";
-                        $basedatosname = "antojitosmarbe";
+                        include 'includes/conexion.php';
 
-                        //Crear cadena conexión
-                        $conexion = mysqli_connect($hostname, $username, $password, $basedatosname);
 
-                        //Revisar conexión
-                        if (!$conexion) {
-                            die("Error al conectar " . mysqli_connect_error());
-                        }
                         $id = $_SESSION['id_usuario'];
                         $sql = "SELECT direccion_usuario FROM usuarios WHERE id_usuario=" . $id;
                         $result = mysqli_query($conexion, $sql);

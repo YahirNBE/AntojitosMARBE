@@ -1,5 +1,6 @@
 <?php
-$conexion = new mysqli("localhost", "root", "", "antojitosmarbe");
+include 'includes/conexion.php';
+
 
 
 $filtro = $_POST['filtro'] ?? "pe.estado_pedido";

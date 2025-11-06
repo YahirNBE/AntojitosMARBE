@@ -122,19 +122,9 @@
             </p>
         </div> -->
         <?php
-        // Cadena de conexión
-        $hostname = "localhost";
-        $username = "root";
-        $password = "";
-        $basedatosname = "antojitosmarbe";
+        include 'includes/conexion.php';
 
-        //Crear cadena conexión
-        $conexion = mysqli_connect($hostname, $username, $password, $basedatosname);
 
-        //Revisar conexión
-        if (!$conexion) {
-            die("Error al conectar " . mysqli_connect_error());
-        }
 
         $sql = "SELECT
                     u.nomcompleto_usuario,

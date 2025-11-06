@@ -1,0 +1,58 @@
+
+
+.tickethoja {
+    border: 1px solid black;
+    width: 794px;
+    height: 1123px;
+    background-color: white;
+}
+
+.ticketinfo {
+    margin: 0 auto;
+    max-width: 550px;
+    text-align: center;
+}
+
+.ticketline {
+    text-align: center;
+}
+
+.ticketimagen p {
+    text-align: center;
+}
+
+.ticketimagen p img {
+    width: 150px;
+    border-radius: 100%;
+}
+
+.ticketdate {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ticketcontainer {
+    display: flex;
+}
+
+.tickettableCenter {
+    margin: 0 auto;
+}
+
+.ticketbody tbody tr td {
+    text-align: center;
+}
+
+.tickettotal {
+    margin-left: 480px;
+    text-align: right;
+}
+
+.tickettotalCompra {
+    font-size: 20px;
+}
+
+.ticketbye {
+    margin: 0 auto;
+    font-size: 30px;
+}

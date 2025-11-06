@@ -5,11 +5,9 @@ if (!$data) {
     echo json_encode(["error" => "No se recibieron datos"]);
     exit;
 }
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "antojitosmarbe";
-$conexion = mysqli_connect($host, $user, $password, $database);
+include 'includes/conexion.php';
+
+
 if (!$conexion) {
     echo json_encode(["success" => false, "error" => "Error de conexión"]);
     exit;

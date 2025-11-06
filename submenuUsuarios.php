@@ -130,19 +130,8 @@
             </thead>
             <tbody id="resultados">
                 <?php
-                // Cadena de conexión
-                $hostname = "localhost";
-                $username = "root";
-                $password = "";
-                $basedatosname = "antojitosmarbe";
+                include 'includes/conexion.php';
 
-                //Crear cadena conexión
-                $conexion = mysqli_connect($hostname, $username, $password, $basedatosname);
-
-                //Revisar conexión
-                if (!$conexion) {
-                    die("Error al conectar " . mysqli_connect_error());
-                }
 
                 $sql = "SELECT * FROM usuarios WHERE activo_usuario=1";
                 $result = mysqli_query($conexion, $sql);

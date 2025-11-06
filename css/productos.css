@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/antojitos.png');
+    /* background-image: url('../images/fondo_naranja.jpg'); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: -1;
+}
+
+/* CSS del menú de opciones */
+
+.navbar {
+    background-color: #fba728;
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    margin: 35px 10px 20px 15px;
+    display: flex;
+}
+
+.img-logo {
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+.logo a p {
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    top: 46px;
+    left: 70px;
+}
+
+.icono {
+    width: 30px;
+}
+
+.submenu ul li {
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.submenu ul li:hover {
+    background-color: #f8f3f3;
+}
+
+.submenu ul li a {
+    display: flex;
+}
+
+.submenu ul li a p {
+    position: relative;
+    top: 4px;
+    left: 8px;
+}
+
+.sign-out {
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+}
+
+.sign-out:hover {
+    background-color: aliceblue;
+}
+
+.sign-out a {
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    padding: 10px 0 10px 15px;
+}
+
+.sign-out a p {
+    position: relative;
+    top: 1px;
+    left: 8px;
+}
+
+.line {
+    width: 250px;
+    height: 1px;
+    background-color: #210802;
+}
+
+#menu {
+    display: none;
+}
+
+#menu:checked~.navbar {
+    transform: translateX(0);
+}
+
+.label-menu {
+    margin: 10px 0 20px 10px;
+    position: fixed;
+    z-index: 1000;
+
+}
+
+.menu-icon {
+    width: 25px;
+}
+
+/* CSS del menú de opciones */
+h1 {
+    padding: 20px 0px 10px 0px;
+    color: white;
+}
+
+.buscador-form {
+    margin: 0 auto;
+    display: flex;
+    border-radius: 18px;
+    background-color: #210802;
+    width: 500px;
+}
+
+.buscador-form p {
+    color: #f8f3f3;
+    font-size: 20px;
+    margin: 5px 27px;
+}
+
+.buscador-form select,
+input,
+button {
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 6px 5px;
+}
+
+.buscador-form input::placeholder {
+    padding-left: 5px;
+}
+
+#buscar {
+    width: 26px;
+    cursor: pointer;
+}
+
+#buscar:hover {
+    background-color: #b9b9b9;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+}
+
+.table {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .18);
+    backdrop-filter: blur(10px);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .25);
+    min-height: 500px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table tbody {
+    background-color: #f8f3f3;
+}
+
+table td {
+    border: 1px solid black;
+    color: #3a3737;
+    font-size: 12px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+table thead tr th {
+    background-color: #f9833a;
+    border: 1px solid #f9833a;
+    font-size: 15px;
+    padding: 10px 5px;
+    color: #f8f3f3;
+}
+
+
+/* Configuración de botones */
+
+.btn-1 img {
+    width: 20px;
+    padding: 2px 0;
+    margin: 0 5px;
+}
+
+.btn-1 {
+    display: flex;
+    position: relative;
+    width: 220px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn-1 p {
+    position: relative;
+    top: 3px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-2 img,
+.btn-3 img {
+    width: 20px;
+    margin: 2px;
+}
+
+.btn-2,
+.btn-3 {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn-1 {
+    border-radius: 5px;
+    background-color: #ffc336;
+}
+
+.btn-2 {
+    border-radius: 5px;
+    background-color: #fba728;
+}
+
+.btn-3 {
+    border-radius: 5px;
+    background-color: #d71a0c;
+}
+
+.btn-1:hover {
+    background-color: #a77f24;
+}
+
+.btn-2:hover {
+    background-color: #c07f1e;
+}
+
+.btn-3:hover {
+    background-color: #96160d;
+}
+
+/* Configuración de botones */
+
+
+
+.table-image {
+    width: 100px;
+    height: 100px;
+}
+
+/* Modales */
+.Ventana {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+    /* Ocultar */
+}
+
+
+.Ventana-content {
+    background: #fff;
+    padding: 20px;
+    width: 440px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.Ventana button {
+    position: relative;
+    width: 108px;
+    left: calc(50% - 54px);
+    display: flex;
+    cursor: pointer;
+    background-color: #ffc336;
+}
+
+.Ventana button:hover {
+    background-color: #a77f24;
+}
+
+.Ventana button img {
+    width: 25px;
+}
+
+.Ventana button p {
+    position: relative;
+    margin: 0 4px;
+}
+
+.Ventana form input {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.Ventana form .inputImage {
+    border: none;
+}
+
+.cerrarEditar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+@media(max-width:991px) {
+
+    h1 {
+        padding: 20px 0px 10px 0px;
+    }
+
+    .btn-1 p {
+        font-size: 9px;
+        top: 7px;
+    }
+
+    .Ventana button p {
+        position: relative;
+        margin: 4px 7px;
+    }
+
+    .btn-1 {
+        width: 150px;
+    }
+
+    table td {
+        font-size: 9px;
+        padding: 2px 0px;
+    }
+
+    table thead tr th {
+        font-size: 9px;
+        padding: 2px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .table {
+        overflow-x: auto;
+    }
+
+    .buscador-form {
+        width: 350px;
+    }
+
+    .buscador-form p {
+        color: #f8f3f3;
+        font-size: 12px;
+        margin: 10px 0px 0px 5px;
+    }
+
+    .buscador-form select,
+    input,
+    button {
+        font-size: 12px;
+        margin: 6px 2px;
+    }
+
+    .table-image {
+        width: 70px;
+        height: 70px;
+    }
+
+
+}

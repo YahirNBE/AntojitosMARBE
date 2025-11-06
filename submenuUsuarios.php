@@ -20,7 +20,8 @@
     ?>
     <!-- HTML del menú de opciones  -->
     <input type="checkbox" id="menu" />
-    <label class="label-menu" for="menu"><img class="menu-icon" id="menuIcon" src="images/menu-iconBlanco.png" alt=""></label>
+    <label class="label-menu" for="menu"><img class="menu-icon" id="menuIcon" src="images/menu-iconBlanco.png"
+            alt=""></label>
     <navbar class="navbar">
         <div class="logo">
             <?php if ($rol == "Administrador") { ?>
@@ -111,10 +112,18 @@
     </header>
 
     <div class="table container">
-        <button class="btn-1" id="btnAbrirModal">
-            <img src="images/logo_agregar.png" alt="">
-            <p>Añadir Usuario</p>
-        </button>
+
+        <div class="buttons-excel">
+            <button class="btn-1" id="btnAbrirModal">
+                <img src="images/logo_agregar.png" alt="">
+                <p>Añadir Usuario</p>
+            </button>
+            <button class="btn-excel" id="btn-excel">
+                <img src="images/logo_excel.png" alt="">
+                <p>Excel</p>
+            </button>
+        </div>
+
         <table width="100%">
             <thead>
                 <tr>
@@ -246,6 +255,11 @@
     </div>
 
 
+    <script>
+        //Script de descargar Excel
+
+        
+    </script>
 
     <script>
         //Script de buscar 

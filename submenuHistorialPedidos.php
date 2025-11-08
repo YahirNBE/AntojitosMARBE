@@ -127,6 +127,12 @@
             <label for="fecha_fin">Hasta:</label>
             <input type="date" id="fecha_fin">
         </div>
+        <div class="buttons-excel">
+            <button class="btn-excel" id="btn-excel">
+                <img src="images/logo_excel.png" alt="">
+                <p>Excel</p>
+            </button>
+        </div>
         <table width="100%">
             <thead>
                 <tr>
@@ -317,6 +323,59 @@
         </div>
     </div>
 
+    <script>
+        //Script de descargar Excel
+        document.getElementById("btn-excel").addEventListener("click", function () {
+            // Seleccionar la tabla
+            let tabla = document.querySelector("table");
+
+            // Crear un archivo Excel usando una tabla HTML
+            let html = tabla.outerHTML;
+
+            // Obtener fecha actual para el nombre del archivo
+            let fecha = new Date();
+            let dia = String(fecha.getDate()).padStart(2, '0');
+            let mes = String(fecha.getMonth() + 1).padStart(2, '0');
+            let anio = fecha.getFullYear();
+            let nombreArchivo = `HistorialPedidos_${dia}-${mes}-${anio}.xls`;
+
+            // Crear un Blob con el contenido HTML de la tabla
+            let blob = new Blob([`
+            <html xmlns:x="urn:schemas-microsoft-com:office:excel">
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    table, th, td {
+                        border: 1px solid black;
+                        border-collapse: collapse;
+                        text-align: center;
+                    }
+                    th {
+                        background-color: #d9ead3;
+                        font-weight: bold;
+                    }
+                </style>
+            </head>
+            <body>
+                ${html}
+            </body>
+            </html>
+        `], { type: "application/vnd.ms-excel" });
+
+            // Crear enlace de descarga
+            let enlace = document.createElement("a");
+            enlace.href = URL.createObjectURL(blob);
+            enlace.download = nombreArchivo;
+
+            // Disparar la descarga
+            enlace.click();
+
+            // Liberar la URL del objeto
+            URL.revokeObjectURL(enlace.href);
+        });
+    </script>
+
+
 
     <script>
         //Script de buscar 
@@ -420,7 +479,7 @@
 
         });
     </script>
-    
+
     <script>
         // Script de filtrar por fechas
         const fechaInicio = document.getElementById('fecha_inicio');
@@ -430,12 +489,12 @@
         fechaInicio.addEventListener('change', filtrarPorFechas);
         fechaFin.addEventListener('change', filtrarPorFechas);
 
-        
+
         function filtrarPorFechas() {
             const inicio = fechaInicio.value;
             const fin = fechaFin.value;
 
-            
+
             // Solo enviar si ambas fechas están seleccionadas
             if (inicio && fin) {
                 fetch('buscarFechasHistorialPedido.php', {
@@ -445,10 +504,10 @@
                     },
                     body: "fecha_inicio=" + inicio + "&fecha_fin=" + fin
                 })
-                   .then(res => res.text())
-                .then(data => {
-                    document.getElementById("resultados").innerHTML = data;
-                });
+                    .then(res => res.text())
+                    .then(data => {
+                        document.getElementById("resultados").innerHTML = data;
+                    });
             }
         }
     </script>

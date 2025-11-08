@@ -21,7 +21,8 @@
 
     <!-- HTML del menú de opciones  -->
     <input type="checkbox" id="menu" />
-    <label class="label-menu" for="menu"><img class="menu-icon" id="menuIcon" src="images/menu-iconBlanco.png" alt=""></label>
+    <label class="label-menu" for="menu"><img class="menu-icon" id="menuIcon" src="images/menu-iconBlanco.png"
+            alt=""></label>
     <navbar class="navbar">
         <div class="logo">
             <?php if ($rol == "Administrador") { ?>
@@ -116,10 +117,17 @@
     </header>
 
     <div class="table container">
-        <button class="btn-1" id="btnAbrirModal">
-            <img src="images/logo_agregar.png" alt="">
-            <p>Añadir Producto</p>
-        </button>
+        <div class="buttons-excel">
+            <button class="btn-1" id="btnAbrirModal">
+                <img src="images/logo_agregar.png" alt="">
+                <p>Añadir Producto</p>
+            </button>
+            <button class="btn-excel" id="btn-excel">
+                <img src="images/logo_excel.png" alt="">
+                <p>Excel</p>
+            </button>
+        </div>
+
         <table width="100%">
             <thead>
                 <tr>
@@ -221,6 +229,57 @@
         </div>
     </div>
 
+    <script>
+        //Script de descargar Excel
+        document.getElementById("btn-excel").addEventListener("click", function () {
+            // Seleccionar la tabla
+            let tabla = document.querySelector("table");
+
+            // Crear un archivo Excel usando una tabla HTML
+            let html = tabla.outerHTML;
+
+            // Obtener fecha actual para el nombre del archivo
+            let fecha = new Date();
+            let dia = String(fecha.getDate()).padStart(2, '0');
+            let mes = String(fecha.getMonth() + 1).padStart(2, '0');
+            let anio = fecha.getFullYear();
+            let nombreArchivo = `Productos_${dia}-${mes}-${anio}.xls`;
+
+            // Crear un Blob con el contenido HTML de la tabla
+            let blob = new Blob([`
+            <html xmlns:x="urn:schemas-microsoft-com:office:excel">
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    table, th, td {
+                        border: 1px solid black;
+                        border-collapse: collapse;
+                        text-align: center;
+                    }
+                    th {
+                        background-color: #d9ead3;
+                        font-weight: bold;
+                    }
+                </style>
+            </head>
+            <body>
+                ${html}
+            </body>
+            </html>
+        `], { type: "application/vnd.ms-excel" });
+
+            // Crear enlace de descarga
+            let enlace = document.createElement("a");
+            enlace.href = URL.createObjectURL(blob);
+            enlace.download = nombreArchivo;
+
+            // Disparar la descarga
+            enlace.click();
+
+            // Liberar la URL del objeto
+            URL.revokeObjectURL(enlace.href);
+        });
+    </script>
 
 
 

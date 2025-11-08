@@ -79,7 +79,7 @@ if ($fecha_inicio && $fecha_fin) {
         echo $table;
 
     } else {
-        echo "<tr><td width='1200px' colspan='8'>No se encontraron resultados</td></tr>";
+        echo "<tr><td width='1200px' colspan='9'>No se encontraron resultados</td></tr>";
     }
 
 }

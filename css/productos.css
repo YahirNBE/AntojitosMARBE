@@ -206,6 +206,39 @@ button {
     min-height: 500px;
 }
 
+.buttons-excel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-excel img {
+    width: 20px;
+    padding: 2px 0;
+    margin: 0 5px;
+}
+
+.btn-excel {
+    display: flex;
+    position: relative;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn-excel p {
+    position: relative;
+    top: 3px;
+}
+
+.btn-excel {
+    border-radius: 5px;
+    background-color: #07d607;
+}
+
+.btn-excel:hover {
+    background-color: #045d04;
+}
+
 table {
     border-collapse: collapse;
 }

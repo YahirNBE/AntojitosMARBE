@@ -20,7 +20,7 @@
     ?>
     <!-- HTML del menú de opciones  -->
     <input type="checkbox" id="menu" />
-    <label class="label-menu" for="menu"><img class="menu-icon" id="menuIcon" src="images/menu-iconBlanco.png"
+    <label class="label-menu" for="menu"><img class="menu-icon" id="menuIcon" src="images/menu-icon.png"
             alt=""></label>
     <navbar class="navbar">
         <div class="logo">
@@ -410,7 +410,7 @@
         };
     </script>
 
-    <script>
+    <!-- <script>
         const menuCheckbox = document.getElementById("menu");
         const menuIcon = document.getElementById("menuIcon");
 
@@ -422,7 +422,7 @@
                 menuIcon.src = "images/menu-iconBlanco.png";
             }
         });
-    </script>
+    </script> -->
 </body>
 
 </html>

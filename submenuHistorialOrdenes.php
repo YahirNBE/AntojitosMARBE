@@ -23,7 +23,7 @@
 
     <!-- HTML del menú de opciones  -->
     <input type="checkbox" id="menu" />
-    <label class="label-menu" for="menu"><img class="menu-icon" id="menuIcon" src="images/menu-iconBlanco.png"></label>
+    <label class="label-menu" for="menu"><img class="menu-icon" src="images/menu-icon.png"></label>
     <navbar class="navbar">
         <div class="logo">
             <a href="menuCliente.php">
@@ -162,6 +162,8 @@
 
                     }
                     echo $table;
+                } else {
+                    echo "<tr><td width='1200px' colspan='8'>No se encontraron resultados</td></tr>";
                 }
                 ?>
             </tbody>
@@ -479,20 +481,7 @@
         });
     </script>
 
-    <script>
-        //Script del menú hamburguesa
-        const menuCheckbox = document.getElementById("menu");
-        const menuIcon = document.getElementById("menuIcon");
 
-        // Escucha cuando cambia el estado del checkbox
-        menuCheckbox.addEventListener("change", function () {
-            if (menuCheckbox.checked) {
-                menuIcon.src = "images/menu-icon.png";
-            } else {
-                menuIcon.src = "images/menu-iconBlanco.png";
-            }
-        });
-    </script>
 
 
 </body>

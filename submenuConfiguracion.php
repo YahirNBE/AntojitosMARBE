@@ -21,7 +21,7 @@
 
     <!-- HTML del menú de opciones  -->
     <input type="checkbox" id="menu" />
-    <label class="label-menu" for="menu"><img class="menu-icon" id="menuIcon" src="images/menu-iconBlanco.png"></label>
+    <label class="label-menu" for="menu"><img class="menu-icon" src="images/menu-icon.png"></label>
     <navbar class="navbar">
         <div class="logo">
             <?php if ($rol == "Administrador") { ?>
@@ -186,20 +186,7 @@
         </div>
     </form>
 
-    <script>
-        //Script del menú hamburguesa
-        const menuCheckbox = document.getElementById("menu");
-        const menuIcon = document.getElementById("menuIcon");
 
-        // Escucha cuando cambia el estado del checkbox
-        menuCheckbox.addEventListener("change", function () {
-            if (menuCheckbox.checked) {
-                menuIcon.src = "images/menu-icon.png";
-            } else {
-                menuIcon.src = "images/menu-iconBlanco.png";
-            }
-        });
-    </script>
 
     <script>
         //Cargar datos del usuario para editarlos

@@ -689,7 +689,7 @@ table thead tr th {
     }
 
     .btn-1 {
-        width: 100%;
+        /* width: 200px; */
         justify-content: center;
     }
 

@@ -677,6 +677,7 @@ table thead tr th {
     }
 }
 
+
 @media(max-width:600px) {
     .label-menu {
         margin: 10px;
@@ -696,13 +697,60 @@ table thead tr th {
         padding: 0 12px;
     }
 
+    h1 {
+        font-size: clamp(24px, 5vw, 28px);
+    }
+
     .table {
         padding: 12px;
     }
 
-    .btn-1 {
+    .buscador-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .buscador-form p {
+        text-align: center;
+        margin: 8px 0 4px;
+    }
+
+    .buscador-form select,
+    .buscador-form input {
         width: 100%;
-        justify-content: center;
+        margin: 4px 0;
+    }
+
+    #buscar {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .Ventana-content {
+        padding: 20px;
+    }
+
+    .Ventana form select {
+        font-size: 14px;
+    }
+
+    table td {
+        font-size: 11px;
+        padding: 8px 4px;
+    }
+
+    table thead tr th {
+        font-size: 12px;
+        padding: 10px 4px;
+    }
+
+    .fila-pedido {
+        width: 100px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 4px;
     }
 
     .table-image {
@@ -710,3 +758,4 @@ table thead tr th {
         height: 60px;
     }
 }
+

@@ -12,7 +12,7 @@ if (!in_array($filtro, $permitidos)) {
     $filtro = "nom_usuario";
 }
 
-$sql = "SELECT * FROM usuarios WHERE $filtro LIKE ?";
+$sql = "SELECT * FROM usuarios WHERE $filtro LIKE ? AND activo_usuario=1";
 $stmt = $conexion->prepare($sql);
 $busqueda = "%$texto%";
 $stmt->bind_param("s", $busqueda);

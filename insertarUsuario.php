@@ -27,7 +27,7 @@ if ($password != $password2) {
     window.location.href = 'submenuUsuarios.php';</script>";
     } else {
         //Realizar query en la base de datos
-        $query = mysqli_query($conexion, "INSERT INTO `usuarios`(`nom_usuario`, `nomcompleto_usuario`, `correo_usuario`, `pass_usuario`, `tel_usuario`, `direccion_usuario`, `rol_usuario`) VALUES ('" . $usuario . "','" . $nomcompleto . "','" . $correo . "','" . $password . "','" . $telefono . "','" . $direccion . "','" . $rol . "') ");
+        $query = mysqli_query($conexion, "INSERT INTO `usuarios`(`nom_usuario`, `nomcompleto_usuario`, `correo_usuario`, `pass_usuario`, `tel_usuario`, `direccion_usuario`, `rol_usuario`,`activo_usuario`) VALUES ('" . $usuario . "','" . $nomcompleto . "','" . $correo . "','" . $password . "','" . $telefono . "','" . $direccion . "','" . $rol . "',1) ");
 
         //Mostrar el mensaje correspondiente
         if ($query) {
